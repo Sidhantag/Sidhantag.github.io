@@ -16,7 +16,7 @@ jobs:
     name: Broken link check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: lycheeverse/lychee-action@v2
         with:
           # LinkedIn blocks automated checks (HTTP 999); namespace URLs in the bundle are not real links.
@@ -33,7 +33,7 @@ jobs:
     name: Lighthouse (performance, accessibility, SEO)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: treosh/lighthouse-ci-action@v12
         with:
           configPath: ./lighthouserc.json
